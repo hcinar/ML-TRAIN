@@ -5,7 +5,6 @@ Modelling 3 Neuron
 #Imports
 import numpy as np
 
-
 #Inputs
 inputs = [1,2,3,2.5]      
 
