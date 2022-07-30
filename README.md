@@ -1,2 +1,5 @@
 # ML-TRAIN
-ML - Neural Network Training
+ML Tranings Allowed!
+
+You will know when the time is up.
+H.
