@@ -60,13 +60,11 @@ dense2 = Layer_Dense(3,3)
 activation2 = Activation_Softmax()
 loss_function = Loss_CategoricalCrossentropy()
 
-#route and activation corrections at neurons
 dense1.forward(X)
 activation1.forward(dense1.output)
 dense2.forward(activation1.output)
 activation2.forward(dense2.output)
 
-#error calculation from sample and calculation data
 loss = loss_function.calculate(activation2.output,y)
 
 #predefined sets to find best values of neurons
@@ -109,7 +107,12 @@ for iteration in range(100000):
         best_dense2_biases = dense2.biases.copy()
         lowest_loss = loss
     
-
+print('Best Values Of Neurons')
+print('Dense1 Weights and Biases')
+print(best_dense1_weights,best_dense1_biases)
+print('Dense2 Weights and Biases')
+print(best_dense1_weights,best_dense1_biases)
+print('Loss:', loss)
 
 
 

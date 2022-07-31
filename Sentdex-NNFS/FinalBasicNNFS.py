@@ -107,7 +107,12 @@ for iteration in range(100000):
         best_dense2_biases = dense2.biases.copy()
         lowest_loss = loss
     
-
+print('Best Values Of Neurons')
+print('Dense1 Weights and Biases')
+print(best_dense1_weights,best_dense1_biases)
+print('Dense2 Weights and Biases')
+print(best_dense1_weights,best_dense1_biases)
+print('Loss:', loss)
 
 
 
