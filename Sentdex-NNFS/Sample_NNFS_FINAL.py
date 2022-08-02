@@ -3,7 +3,6 @@ Sample NNFS
 """
 
 #Imports
-from ossaudiodev import SNDCTL_DSP_SAMPLESIZE
 from random import random
 import numpy as np
 import nnfs
