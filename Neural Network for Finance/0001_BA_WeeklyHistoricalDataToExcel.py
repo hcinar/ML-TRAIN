@@ -11,13 +11,18 @@ RECV_WINDOW=1000
 
 #STATIC FIELDS
 key, secret = '',''
+#Paste value for internal use :)
+#key, secret = 'xxxx','yyyyy'
+
 
 #SYMBOL
 symbol = "BTCUSDT"
 from_date = "1 Jan, 2010"
 
-#Export Path
-data_export_path = r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"W"+'.xlsx'
+
+#Export Path Daily and Weekly
+weekly_data_export_path = r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"W"+'.xlsx'
+daily_data_export_path = r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"D"+'.xlsx'
 
 #Check Client Condition
 def CheckClient(_client):
@@ -45,10 +50,22 @@ def GetWeeklyDataToExcel(symbol, from_date, data_export_path, client):
     df = pd.DataFrame(weekly)
     df.to_excel(data_export_path)
     return weekly
-    
 
-key, secret = GetKeysFromFile(key_file_path)
+#Get daily data from file
+def GetDailyDataToExcel(symbol, from_date, data_export_path, client):
+    # fetch daily klines since it from_Date into excel file
+    daily = client.get_historical_klines(symbol, Client.KLINE_INTERVAL_1DAY, from_date)
+    df = pd.DataFrame(daily)
+    df.to_excel(data_export_path)
+    return daily
+
+
+#Check key and secret.
+if key == '' or secret == '':
+    key, secret = GetKeysFromFile(key_file_path)
+
 #Client Access
 client = Client(key, secret)
 CheckClient(client)
-GetWeeklyDataToExcel(symbol, from_date, data_export_path, client)
+GetWeeklyDataToExcel(symbol, from_date, weekly_data_export_path, client)
+GetDailyDataToExcel(symbol, from_date, daily_data_export_path, client)
