@@ -22,6 +22,7 @@ from_date = "1 Jan, 2010"
 weekly_data_export_path = r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"W"+'.xlsx'
 daily_data_export_path = r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"D"+'.xlsx'
 
+
 #Check Client Condition
 def CheckClient(_client):
     #get client condition #200 OK.
