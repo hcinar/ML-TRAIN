@@ -15,7 +15,7 @@ key, secret = '',''
 
 #SYMBOL
 symbol = "BTCUSDT"
-from_date = "1 Jan, 2010"
+from_date = "1 Jan, 2017"
 
 
 #Export Path Daily and Weekly
