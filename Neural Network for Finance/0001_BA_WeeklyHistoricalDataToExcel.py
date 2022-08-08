@@ -59,12 +59,15 @@ def GetDailyDataToExcel(symbol, from_date, data_export_path, client):
     return daily
 
 
-#Check key and secret.
-if key == '' or secret == '':
-    key, secret = GetKeysFromFile(key_file_path)
+if __name__ == "__main__":
+    #Check key and secret.
+    if key == '' or secret == '':
+        key, secret = GetKeysFromFile(key_file_path)
 
-#Client Access
-client = Client(key, secret)
-CheckClient(client)
-GetWeeklyDataToExcel(symbol, from_date, weekly_data_export_path, client)
-GetDailyDataToExcel(symbol, from_date, daily_data_export_path, client)
+    #Client Access
+    client = Client(key, secret)
+    
+    #Connect and Get Data
+    CheckClient(client)
+    GetWeeklyDataToExcel(symbol, from_date, weekly_data_export_path, client)
+    GetDailyDataToExcel(symbol, from_date, daily_data_export_path, client)
