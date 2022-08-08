@@ -6,8 +6,6 @@ import pandas as pd
 #KeySecretPath --> key,secret
 key_file_path = r'/home/hus/GIT/ML-TRAIN/Neural Network for Finance/key-secret.txt'
 
-#API DEFAULTS
-RECV_WINDOW=1000
 
 #STATIC FIELDS
 key, secret = '',''
