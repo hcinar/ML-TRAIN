@@ -50,12 +50,12 @@ def RowTimeFormatCorrection(df):
 def RowWeeklyCloumnsAndCalculations(df):
         #Set Weekly Open for each 7d before
         df['WOPEN'] = df['Open']
-        df.loc[0, 'WOPEN'] ='NaN'
+        df.loc[0, 'WOPEN'] = ''
         for i in range(1, len(df)):
             if i - 5 > 0:
                 df.loc[i, 'WOPEN'] = df.loc[i-6, 'Open']
             elif i - 5 <= 0:
-                df.loc[i, 'WOPEN'] = 'NaN'
+                df.loc[i, 'WOPEN'] = ''
 
         #Set Weekly High for each 7d before
         df['WHIGH'] = df['High'].rolling(7).max()
@@ -65,12 +65,12 @@ def RowWeeklyCloumnsAndCalculations(df):
 
         #Set Weekly Open for each 7d before
         df['WCLOSE'] = df['Close']
-        df.loc[0, 'WCLOSE'] ='NaN'
+        df.loc[0, 'WCLOSE'] =''
         for i in range(1, len(df)):
             if i - 5 > 0:
                 df.loc[i, 'WCLOSE'] = df.loc[i-6, 'Close']
             elif i - 5 <= 0:
-                df.loc[i, 'WCLOSE'] = 'NaN'
+                df.loc[i, 'WCLOSE'] = ''
 
 
 if __name__ == "__main__":
