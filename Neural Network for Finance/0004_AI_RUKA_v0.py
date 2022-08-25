@@ -17,7 +17,7 @@ symbol = "BTCUSDT"
 data_import_paths= [r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"D"+'CHG'+'.xlsx']
 
 #Data Export Paths
-data_export_paths = [r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+AI+"_"+'v0'+'.xlsx']
+data_export_paths = [r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+AI+"_"+version+'.xlsx']
 
 class Layer_Dense:
     def __init__(self,n_inputs,n_neurons):
