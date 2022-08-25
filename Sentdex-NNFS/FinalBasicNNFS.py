@@ -3,7 +3,6 @@ Sample NNFS
 """
 
 #Imports
-from ossaudiodev import SNDCTL_DSP_SAMPLESIZE
 from random import random
 import numpy as np
 import nnfs
@@ -16,10 +15,12 @@ class Layer_Dense:
         self.biases = np.zeros((1,n_neurons))
     def forward(self,inputs):
         self.output = np.dot(inputs,self.weights)+self.biases
+
 #Class for Activation of Inputs
 class Activation_ReLU:
     def forward(self,inputs):
         self.output = np.maximum(0,inputs)
+
 #Expo and Normalize
 class Activation_Softmax:
     def forward(self,inputs):
@@ -30,6 +31,7 @@ class Activation_Softmax:
                                             axis = 1,
                                             keepdims=True)
         self.output = probabilities
+        
 #Loss Class
 class Loss:
     def calculate(self,output,y):
