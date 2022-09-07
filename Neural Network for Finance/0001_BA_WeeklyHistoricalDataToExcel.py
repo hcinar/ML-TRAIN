@@ -4,7 +4,7 @@ import pandas as pd
 
 
 #KeySecretPath --> key,secret
-key_file_path = r'/home/hus/GIT/ML-TRAIN/Neural Network for Finance/key-secret.txt'
+key_file_path = r'C:\Users\ex\Desktop\GitWorks\ML-TRAIN\Neural Network for Finance/key-secret.txt'
 
 
 #STATIC FIELDS
@@ -19,8 +19,8 @@ from_date = "1 Jan, 2017"
 
 
 #Export Path Daily and Weekly
-weekly_data_export_path = r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"W"+'.xlsx'
-daily_data_export_path = r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"D"+'.xlsx'
+weekly_data_export_path = r"C:\Users\ex\Desktop\GitWorks\ML-TRAIN\Neural Network for Finance/"+symbol+"W"+'.xlsx'
+daily_data_export_path = r"C:\Users\ex\Desktop\GitWorks\ML-TRAIN\Neural Network for Finance/"+symbol+"D"+'.xlsx'
 
 
 #Check Client Condition
