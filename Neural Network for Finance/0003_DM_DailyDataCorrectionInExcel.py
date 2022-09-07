@@ -1,7 +1,6 @@
 #Imports
 from numpy import zeros
 import pandas as pd
-from sympy import false
 
 #SYMBOL
 symbol = "BTCUSDT"
