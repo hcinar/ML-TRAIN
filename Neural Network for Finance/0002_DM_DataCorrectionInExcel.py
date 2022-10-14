@@ -6,13 +6,13 @@ symbol = "BTCUSDT"
 
 
 #Data Import Paths 
-data_import_paths= [ r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"W"+'.xlsx',
-                     r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"D"+'.xlsx']
+data_import_paths= [ r"C:\Users\ex\Desktop\GitWorks\ML-TRAIN\Neural Network for Finance/"+symbol+"W"+'.xlsx',
+                     r"C:\Users\ex\Desktop\GitWorks\ML-TRAIN\Neural Network for Finance/"+symbol+"D"+'.xlsx']
 
 
 #Data Export Paths
-data_export_paths = [r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"W"+'CHG'+'.xlsx',
-                     r"/home/hus/GIT/ML-TRAIN/Neural Network for Finance/"+symbol+"D"+'CHG'+'.xlsx']
+data_export_paths = [r"C:\Users\ex\Desktop\GitWorks\ML-TRAIN\Neural Network for Finance/"+symbol+"W"+'CHG'+'.xlsx',
+                     r"C:\Users\ex\Desktop\GitWorks\ML-TRAIN\Neural Network for Finance/"+symbol+"D"+'CHG'+'.xlsx']
 
 #Correct column names
 def ColumnNameCorrection(df):
